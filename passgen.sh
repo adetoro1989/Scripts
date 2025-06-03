@@ -5,6 +5,6 @@
 
 echo "The script will generate password in linux"
 
-password_gen=$(head -c 16 /dev/urandom | base64 |tr -dc 'a-zA-Z0-9')
+password_gen=$(head -c 16 /dev/urandom | base64 |tr -dc 'a-zA-Z0-9!@#$%&')
 
 echo "Your new password is: $password_gen"
