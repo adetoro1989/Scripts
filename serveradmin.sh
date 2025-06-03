@@ -55,5 +55,9 @@ then
 
 	echo "=============================="
 fi
-
+if [ $response -eq 3 ];
+then
+	echo "==== Exiting System ==="
+	exit
+fi
 done
