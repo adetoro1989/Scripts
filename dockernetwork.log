@@ -1,0 +1,53 @@
+[
+    {
+        "Name": "bridge",
+        "Id": "5d0b5ccae79ebd16b8acd4beb11dc0dff42d5a68ce064588091a44d71183cef0",
+        "Created": "2025-09-01T20:15:51.405048915Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.17.0.0/16",
+                    "Gateway": "172.17.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "a7459a2adff0d50f2450d3d35de6451eb51fc792d91c79fca892e6049621d2ee": {
+                "Name": "agitated_pike",
+                "EndpointID": "ef3e532a90b56b5e7e180e641d5dfc1d31be6385c571cae145c9f09878db0f53",
+                "MacAddress": "de:cd:29:c4:ed:e1",
+                "IPv4Address": "172.17.0.2/16",
+                "IPv6Address": ""
+            },
+            "f9e1ac6576bca23341abcb92ba505ed4dab7c76d401ea76dbc8823ac7a2efa1d": {
+                "Name": "happy_aryabhata",
+                "EndpointID": "e20ae66353f123ad9cab55eed13b28d1c88105114bda2251b041b429482ec61d",
+                "MacAddress": "96:8b:ca:6b:f9:91",
+                "IPv4Address": "172.17.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {
+            "com.docker.network.bridge.default_bridge": "true",
+            "com.docker.network.bridge.enable_icc": "true",
+            "com.docker.network.bridge.enable_ip_masquerade": "true",
+            "com.docker.network.bridge.host_binding_ipv4": "0.0.0.0",
+            "com.docker.network.bridge.name": "docker0",
+            "com.docker.network.driver.mtu": "1500"
+        },
+        "Labels": {}
+    }
+]
