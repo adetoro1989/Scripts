@@ -1,0 +1,43 @@
+Name:                   frontend
+Namespace:              default
+CreationTimestamp:      Fri, 05 Sep 2025 12:55:45 +0100
+Labels:                 app=node
+Annotations:            deployment.kubernetes.io/revision: 2
+Selector:               app=node
+Replicas:               6 desired | 6 updated | 6 total | 6 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=node
+  Containers:
+   frontend:
+    Image:         adetoro1989/frontend
+    Port:          3000/TCP
+    Host Port:     0/TCP
+    Environment:   <none>
+    Mounts:        <none>
+  Volumes:         <none>
+  Node-Selectors:  <none>
+  Tolerations:     <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  frontend-75964dbf8d (0/0 replicas created)
+NewReplicaSet:   frontend-555fd77d45 (6/6 replicas created)
+Events:
+  Type    Reason             Age                   From                   Message
+  ----    ------             ----                  ----                   -------
+  Normal  ScalingReplicaSet  24m                   deployment-controller  Scaled up replica set frontend-75964dbf8d from 0 to 2
+  Normal  ScalingReplicaSet  2m29s                 deployment-controller  Scaled up replica set frontend-75964dbf8d from 2 to 6
+  Normal  ScalingReplicaSet  2m29s                 deployment-controller  Scaled up replica set frontend-555fd77d45 from 0 to 2
+  Normal  ScalingReplicaSet  2m29s                 deployment-controller  Scaled down replica set frontend-75964dbf8d from 6 to 5
+  Normal  ScalingReplicaSet  2m29s                 deployment-controller  Scaled up replica set frontend-555fd77d45 from 2 to 3
+  Normal  ScalingReplicaSet  2m17s                 deployment-controller  Scaled down replica set frontend-75964dbf8d from 5 to 4
+  Normal  ScalingReplicaSet  2m17s                 deployment-controller  Scaled up replica set frontend-555fd77d45 from 3 to 4
+  Normal  ScalingReplicaSet  2m15s                 deployment-controller  Scaled down replica set frontend-75964dbf8d from 4 to 3
+  Normal  ScalingReplicaSet  2m15s                 deployment-controller  Scaled up replica set frontend-555fd77d45 from 4 to 5
+  Normal  ScalingReplicaSet  2m13s                 deployment-controller  Scaled down replica set frontend-75964dbf8d from 3 to 2
+  Normal  ScalingReplicaSet  2m9s (x3 over 2m13s)  deployment-controller  (combined from similar events): Scaled down replica set frontend-75964dbf8d from 1 to 0
