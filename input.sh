@@ -14,7 +14,7 @@ if [ $response -eq 1 ];
 then
 	read -p "Enter your chosen username:" username
 	output="$(grep -w $username /etc/passwd)"
-	if [ -n "$output" ];
+	if [ -n "$output" ]; # Check if Output initially declared above isnt empty
 	then
 		echo " The user already exist"
 	else
