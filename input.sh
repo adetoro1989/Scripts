@@ -1,7 +1,7 @@
 #! /bin/bash
-# Description: This script is a general server admin script that takes an administrato's input and carry out some administrative tasks
+# Description: This script is a general server admin script that takes an administrator's input and carry out some administrative tasks
 # Date Created: 8-Dec-25
-# Date Modified: 12-Dec-25
+# Date Modified: 20-Dec-25
 
 echo
 echo "Choose from any of the option as seen: 1 === Add User, 2 === Show System Info, 3 === Quit"
